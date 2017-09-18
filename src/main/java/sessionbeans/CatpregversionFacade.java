@@ -6,9 +6,11 @@
 package sessionbeans;
 
 import entities.Catpregversion;
+import java.util.List;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
 
 /**
  *
@@ -28,5 +30,15 @@ public class CatpregversionFacade extends AbstractFacade<Catpregversion> impleme
     public CatpregversionFacade() {
         super(Catpregversion.class);
     }
-    
+
+    @Override
+    public List<Catpregversion> findByIdcatpreguntas(Integer idcatpreguntas) {
+        Query query = em.createQuery("SELECT c FROM Catpregversion c WHERE c.idcatpreguntas = :idcatpreguntas = ?1");
+        query.setParameter(1, idcatpreguntas);
+        List results = query.getResultList();
+        if (results.isEmpty()) {
+            return null;
+        }
+        return  results;
+    }
 }

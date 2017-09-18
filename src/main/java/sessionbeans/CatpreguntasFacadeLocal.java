@@ -6,6 +6,7 @@
 package sessionbeans;
 
 import entities.Catpreguntas;
+import entities.Catpregversion;
 import java.util.List;
 import javax.ejb.Local;
 

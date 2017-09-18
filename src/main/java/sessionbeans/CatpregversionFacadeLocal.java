@@ -23,6 +23,8 @@ public interface CatpregversionFacadeLocal {
     void remove(Catpregversion catpregversion);
 
     Catpregversion find(Object id);
+          
+    List<Catpregversion> findByIdcatpreguntas(Integer idcatpreguntas);
 
     List<Catpregversion> findAll();
 
