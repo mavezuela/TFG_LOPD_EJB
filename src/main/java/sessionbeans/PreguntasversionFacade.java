@@ -5,10 +5,13 @@
  */
 package sessionbeans;
 
+import entities.Catpregversion;
 import entities.Preguntasversion;
+import java.util.List;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
 
 /**
  *
@@ -28,5 +31,15 @@ public class PreguntasversionFacade extends AbstractFacade<Preguntasversion> imp
     public PreguntasversionFacade() {
         super(Preguntasversion.class);
     }
-    
+ 
+    @Override
+    public List<Preguntasversion> findByIdcatpregversion(Catpregversion catpregversion) {
+        Query query = em.createQuery("SELECT c FROM Preguntasversion c WHERE c.idcatpregversion = ?1");
+        query.setParameter(1, catpregversion);
+        List results = query.getResultList();
+        if (results.isEmpty()) {
+            return null;
+        }
+        return  results;
+    }       
 }

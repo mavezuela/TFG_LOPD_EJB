@@ -5,6 +5,7 @@
  */
 package sessionbeans;
 
+import entities.Catpregversion;
 import entities.Preguntasversion;
 import java.util.List;
 import javax.ejb.Local;
@@ -27,6 +28,8 @@ public interface PreguntasversionFacadeLocal {
     List<Preguntasversion> findAll();
 
     List<Preguntasversion> findRange(int[] range);
+    
+    List<Preguntasversion> findByIdcatpregversion(Catpregversion catpregversion);
 
     int count();
     

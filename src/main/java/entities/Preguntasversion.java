@@ -31,6 +31,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 @NamedQueries({
     @NamedQuery(name = "Preguntasversion.findAll", query = "SELECT p FROM Preguntasversion p")
     , @NamedQuery(name = "Preguntasversion.findByIdpreguntas", query = "SELECT p FROM Preguntasversion p WHERE p.idpreguntas = :idpreguntas")
+    , @NamedQuery(name = "Catpregversion.findByIdcatpregversion", query = "SELECT c FROM Preguntasversion c WHERE c.idcatpregversion = :idcatpregversion")
     , @NamedQuery(name = "Preguntasversion.findByPregunta", query = "SELECT p FROM Preguntasversion p WHERE p.pregunta = :pregunta")})
 public class Preguntasversion implements Serializable {
 

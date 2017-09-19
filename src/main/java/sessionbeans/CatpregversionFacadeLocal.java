@@ -6,6 +6,7 @@
 package sessionbeans;
 
 import entities.Catpregversion;
+import entities.Version;
 import java.util.List;
 import javax.ejb.Local;
 
@@ -25,6 +26,8 @@ public interface CatpregversionFacadeLocal {
     Catpregversion find(Object id);
           
     List<Catpregversion> findByIdcatpreguntas(Integer idcatpreguntas);
+    
+    List<Catpregversion> findByIdversion(Version version);
 
     List<Catpregversion> findAll();
 

@@ -12,6 +12,8 @@ import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinColumns;
@@ -41,7 +43,7 @@ import javax.xml.bind.annotation.XmlTransient;
 public class Catpreguntas implements Serializable {
 
     private static final long serialVersionUID = 1L;
-    @Id
+    @Id 
     @Basic(optional = false)
     @NotNull
     @Column(name = "idcatpreguntas")

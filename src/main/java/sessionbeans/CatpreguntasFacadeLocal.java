@@ -28,6 +28,8 @@ public interface CatpreguntasFacadeLocal {
     List<Catpreguntas> findAll();
 
     List<Catpreguntas> findRange(int[] range);
+    
+    List<Catpreguntas> findByIdcatpreguntas(Integer idcatpreguntas);
 
     int count();
     

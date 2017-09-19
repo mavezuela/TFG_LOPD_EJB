@@ -33,6 +33,7 @@ import javax.xml.bind.annotation.XmlTransient;
 @NamedQueries({
     @NamedQuery(name = "Catpregversion.findAll", query = "SELECT c FROM Catpregversion c")
     , @NamedQuery(name = "Catpregversion.findByIdcatpreguntas", query = "SELECT c FROM Catpregversion c WHERE c.idcatpreguntas = :idcatpreguntas")
+    , @NamedQuery(name = "Catpregversion.findByIdversion", query = "SELECT c FROM Catpregversion c WHERE c.idversion = :idversion")   
     , @NamedQuery(name = "Catpregversion.findByCategoria", query = "SELECT c FROM Catpregversion c WHERE c.categoria = :categoria")
     , @NamedQuery(name = "Catpregversion.findByDescripcion", query = "SELECT c FROM Catpregversion c WHERE c.descripcion = :descripcion")})
 public class Catpregversion implements Serializable {
