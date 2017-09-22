@@ -7,6 +7,10 @@ package sessionbeans;
 
 import entities.Catpreguntas;
 import entities.Catpregversion;
+import entities.Ficheros;
+import entities.Version;
+import entities.Versionfichero;
+import entities.VersionficheroPK;
 import java.util.List;
 import javax.ejb.Local;
 
@@ -30,7 +34,7 @@ public interface CatpreguntasFacadeLocal {
     List<Catpreguntas> findRange(int[] range);
     
     List<Catpreguntas> findByIdcatpreguntas(Integer idcatpreguntas);
-
+    
     int count();
     
 }

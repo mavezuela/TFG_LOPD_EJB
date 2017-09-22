@@ -6,6 +6,10 @@
 package sessionbeans;
 
 import entities.Catpreguntas;
+import entities.Ficheros;
+import entities.Version;
+import entities.Versionfichero;
+import entities.VersionficheroPK;
 import java.util.List;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;

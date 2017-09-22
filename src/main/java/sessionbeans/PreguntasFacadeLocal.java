@@ -5,6 +5,7 @@
  */
 package sessionbeans;
 
+import entities.Catpreguntas;
 import entities.Preguntas;
 import java.util.List;
 import javax.ejb.Local;
@@ -27,6 +28,8 @@ public interface PreguntasFacadeLocal {
     List<Preguntas> findAll();
 
     List<Preguntas> findRange(int[] range);
+    
+    List<Preguntas> findByIdcatpreguntas(Catpreguntas catpreguntas);
 
     int count();
     

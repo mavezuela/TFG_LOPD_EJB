@@ -5,6 +5,7 @@
  */
 package sessionbeans;
 
+import entities.Departamento;
 import entities.Ficheros;
 import java.util.List;
 import javax.ejb.Local;
@@ -27,6 +28,8 @@ public interface FicherosFacadeLocal {
     List<Ficheros> findAll();
 
     List<Ficheros> findRange(int[] range);
+    
+    List<Ficheros> findByIddepartamento(Departamento departamento);
 
     int count();
     

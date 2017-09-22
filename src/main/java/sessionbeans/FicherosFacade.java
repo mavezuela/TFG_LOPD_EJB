@@ -5,10 +5,13 @@
  */
 package sessionbeans;
 
+import entities.Departamento;
 import entities.Ficheros;
+import java.util.List;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
 
 /**
  *
@@ -28,5 +31,17 @@ public class FicherosFacade extends AbstractFacade<Ficheros> implements Ficheros
     public FicherosFacade() {
         super(Ficheros.class);
     }
+    
+    @Override
+    public List<Ficheros> findByIddepartamento(Departamento departamento) {
+        Query query = em.createQuery("SELECT f FROM Ficheros f WHERE f.iddepartamento = ?1");
+        query.setParameter(1, departamento);
+        List results = query.getResultList();
+        if (results.isEmpty()) {
+            return null;
+        }
+        return results;
+    }    
+    
     
 }
